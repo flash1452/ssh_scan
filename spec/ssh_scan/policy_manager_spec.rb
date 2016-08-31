@@ -156,8 +156,3 @@ describe SSHScan::PolicyManager do
   end
 
 end
-
-
-
-
-
