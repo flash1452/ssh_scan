@@ -12,23 +12,23 @@ describe SSHScan::PolicyManager do
                   "- zlib@openssh.com\n" +
                   "references:\n- https://wiki.mozilla.org/Security/Guidelines/OpenSSH\n"
     result =  {
-      :encryption_algorithms_client_to_server => [
-        "chacha20-poly1305@openssh.com",
-        "aes128-ctr",
-        "aes192-ctr",
-        "aes256-ctr",
-        "aes128-gcm@openssh.com",
-        "aes256-gcm@openssh.com"
-      ],
-      :encryption_algorithms_server_to_client => [
-        "chacha20-poly1305@openssh.com",
-        "aes128-ctr",
-        "aes192-ctr",
-        "aes256-ctr",
-        "aes128-gcm@openssh.com",
-        "aes256-gcm@openssh.com"
-        ]
-    }
+                :encryption_algorithms_client_to_server => [
+                  "chacha20-poly1305@openssh.com",
+                  "aes128-ctr",
+                  "aes192-ctr",
+                  "aes256-ctr",
+                  "aes128-gcm@openssh.com",
+                  "aes256-gcm@openssh.com"
+                ],
+                :encryption_algorithms_server_to_client => [
+                  "chacha20-poly1305@openssh.com",
+                  "aes128-ctr",
+                  "aes192-ctr",
+                  "aes256-ctr",
+                  "aes128-gcm@openssh.com",
+                  "aes256-gcm@openssh.com"
+                ]
+              }
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
@@ -46,23 +46,23 @@ describe SSHScan::PolicyManager do
                   "- zlib@openssh.com\n" +
                   "references:\n- https://wiki.mozilla.org/Security/Guidelines/OpenSSH\n"
     result = {
-      :encryption_algorithms_client_to_server => [
-        "chacha20-poly1305@openssh.com",
-        "aes128-ctr",
-        "aes192-ctr",
-        "aes256-ctr",
-        "aes128-gcm@openssh.com",
-        "aes256-gcm@openssh.com"
-      ],
-      :encryption_algorithms_server_to_client => [
-        "chacha20-poly1305@openssh.com",
-        "aes128-ctr",
-        "aes192-ctr",
-        "aes256-ctr",
-        "aes128-gcm@openssh.com",
-        "aes256-gcm@openssh.com"
-      ]
-    }
+                :encryption_algorithms_client_to_server => [
+                  "chacha20-poly1305@openssh.com",
+                  "aes128-ctr",
+                  "aes192-ctr",
+                  "aes256-ctr",
+                  "aes128-gcm@openssh.com",
+                  "aes256-gcm@openssh.com"
+                ],
+                :encryption_algorithms_server_to_client => [
+                  "chacha20-poly1305@openssh.com",
+                  "aes128-ctr",
+                  "aes192-ctr",
+                  "aes256-ctr",
+                  "aes128-gcm@openssh.com",
+                  "aes256-gcm@openssh.com"
+                ]
+              }
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
@@ -80,31 +80,31 @@ describe SSHScan::PolicyManager do
                   "- zlib@openssh.com\n" +
                   "references:\n- https://wiki.mozilla.org/Security/Guidelines/OpenSSH\n"
     result =  {
-      :mac_algorithms_client_to_server => [
-        "umac-64-etm@openssh.com",
-        "umac-128-etm@openssh.com",
-        "hmac-sha2-256-etm@openssh.com",
-        "hmac-sha2-512-etm@openssh.com",
-        "hmac-sha1-etm@openssh.com",
-        "umac-64@openssh.com",
-        "umac-128@openssh.com",
-        "hmac-sha2-256",
-        "hmac-sha2-512",
-        "hmac-sha1"
-      ],
-      :mac_algorithms_server_to_client => [
-        "umac-64-etm@openssh.com",
-        "umac-128-etm@openssh.com",
-        "hmac-sha2-256-etm@openssh.com",
-        "hmac-sha2-512-etm@openssh.com",
-        "hmac-sha1-etm@openssh.com",
-        "umac-64@openssh.com",
-        "umac-128@openssh.com",
-        "hmac-sha2-256",
-        "hmac-sha2-512",
-        "hmac-sha1"
-      ]
-    }
+                :mac_algorithms_client_to_server => [
+                  "umac-64-etm@openssh.com",
+                  "umac-128-etm@openssh.com",
+                  "hmac-sha2-256-etm@openssh.com",
+                  "hmac-sha2-512-etm@openssh.com",
+                  "hmac-sha1-etm@openssh.com",
+                  "umac-64@openssh.com",
+                  "umac-128@openssh.com",
+                  "hmac-sha2-256",
+                  "hmac-sha2-512",
+                  "hmac-sha1"
+                ],
+                :mac_algorithms_server_to_client => [
+                  "umac-64-etm@openssh.com",
+                  "umac-128-etm@openssh.com",
+                  "hmac-sha2-256-etm@openssh.com",
+                  "hmac-sha2-512-etm@openssh.com",
+                  "hmac-sha1-etm@openssh.com",
+                  "umac-64@openssh.com",
+                  "umac-128@openssh.com",
+                  "hmac-sha2-256",
+                  "hmac-sha2-512",
+                  "hmac-sha1"
+                ]
+              }
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
@@ -122,31 +122,31 @@ describe SSHScan::PolicyManager do
                   "- zlib@openssh.com\n" +
                   "references:\n- https://wiki.mozilla.org/Security/Guidelines/OpenSSH\n"
     result = {
-      :mac_algorithms_client_to_server => [
-        "umac-64-etm@openssh.com",
-        "umac-128-etm@openssh.com",
-        "hmac-sha2-256-etm@openssh.com",
-        "hmac-sha2-512-etm@openssh.com",
-        "hmac-sha1-etm@openssh.com",
-        "umac-64@openssh.com",
-        "umac-128@openssh.com",
-        "hmac-sha2-256",
-        "hmac-sha2-512",
-        "hmac-sha1"
-      ],
-      :mac_algorithms_server_to_client => [
-        "umac-64-etm@openssh.com",
-        "umac-128-etm@openssh.com",
-        "hmac-sha2-256-etm@openssh.com",
-        "hmac-sha2-512-etm@openssh.com",
-        "hmac-sha1-etm@openssh.com",
-        "umac-64@openssh.com",
-        "umac-128@openssh.com",
-        "hmac-sha2-256",
-        "hmac-sha2-512",
-        "hmac-sha1"
-      ]
-    }
+                :mac_algorithms_client_to_server => [
+                  "umac-64-etm@openssh.com",
+                  "umac-128-etm@openssh.com",
+                  "hmac-sha2-256-etm@openssh.com",
+                  "hmac-sha2-512-etm@openssh.com",
+                  "hmac-sha1-etm@openssh.com",
+                  "umac-64@openssh.com",
+                  "umac-128@openssh.com",
+                  "hmac-sha2-256",
+                  "hmac-sha2-512",
+                  "hmac-sha1"
+                ],
+                :mac_algorithms_server_to_client => [
+                  "umac-64-etm@openssh.com",
+                  "umac-128-etm@openssh.com",
+                  "hmac-sha2-256-etm@openssh.com",
+                  "hmac-sha2-512-etm@openssh.com",
+                  "hmac-sha1-etm@openssh.com",
+                  "umac-64@openssh.com",
+                  "umac-128@openssh.com",
+                  "hmac-sha2-256",
+                  "hmac-sha2-512",
+                  "hmac-sha1"
+                ]
+              }
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
