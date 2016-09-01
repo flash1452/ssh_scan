@@ -75,7 +75,7 @@ describe SSHScan::PolicyManager do
     end
   end
 
-  context "when checking out of policy macs" do
+  context "when checking out of policy mac" do
     yaml_string = "---\nname: Mozilla Intermediate\nkex:\n" +
                   "- diffie-hellman-group-exchange-sha256\n" +
                   "encryption:\n- aes256-ctr\n- aes192-ctr\n" +
@@ -125,7 +125,7 @@ describe SSHScan::PolicyManager do
     end
   end
 
-  context "when checking the missing policy macs" do
+  context "when checking the missing policy mac" do
     yaml_string = "---\nname: Mozilla Intermediate\nkex:\n" +
                   "- diffie-hellman-group-exchange-sha256\n" +
                   "encryption:\n- aes256-ctr\n- aes192-ctr\n" +
