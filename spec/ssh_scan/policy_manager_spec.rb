@@ -32,8 +32,11 @@ describe SSHScan::PolicyManager do
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
-      policy_obj = SSHScan::PolicyManager.new(result,policy)
-      out_of_policy_enc = policy_obj.out_of_policy_encryption()
+      policy_manager = SSHScan::PolicyManager.new(result,policy)
+      outliers = ["chacha20-poly1305@openssh.com",
+                  "aes128-gcm@openssh.com",
+                  "aes256-gcm@openssh.com"]
+      expect(policy_manager.out_of_policy_encryption()).to eql(outliers)
     end
   end
 
@@ -66,8 +69,9 @@ describe SSHScan::PolicyManager do
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
-      policy_obj = SSHScan::PolicyManager.new(result,policy)
-      missing_policy_enc = policy_obj.missing_policy_encryption()
+      policy_manager = SSHScan::PolicyManager.new(result,policy)
+      outliers = []
+      expect(policy_manager.missing_policy_encryption()).to eql(outliers)
     end
   end
 
@@ -108,8 +112,16 @@ describe SSHScan::PolicyManager do
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
-      policy_obj = SSHScan::PolicyManager.new(result,policy)
-      out_of_policy_mac = policy_obj.out_of_policy_macs()
+      policy_manager = SSHScan::PolicyManager.new(result,policy)
+      outliers = ["umac-64-etm@openssh.com",
+                  "umac-128-etm@openssh.com",
+                  "hmac-sha2-256-etm@openssh.com",
+                  "hmac-sha2-512-etm@openssh.com",
+                  "hmac-sha1-etm@openssh.com",
+                  "umac-64@openssh.com",
+                  "umac-128@openssh.com",
+                  "hmac-sha1"]
+      expect(policy_manager.out_of_policy_macs()).to eql(outliers)
     end
   end
 
@@ -150,8 +162,9 @@ describe SSHScan::PolicyManager do
 
     it "should load all the attributes properly" do
       policy = SSHScan::Policy.from_string(yaml_string)
-      policy_obj = SSHScan::PolicyManager.new(result,policy)
-      missing_policy_mac = policy_obj.missing_policy_macs()
+      policy_manager = SSHScan::PolicyManager.new(result,policy)
+      outliers = []
+      expect(policy_manager.missing_policy_macs()).to eql(outliers)
     end
   end
 
